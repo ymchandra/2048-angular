@@ -53,7 +53,7 @@ export class CanvasComponent implements OnInit {
   }
 
   /**
-   * When an element emits success, this handler will be called to update the statuses.
+   * When an element emits success, this handler will be called to update the status.
    */
   onSuccess = () => {
     this.gameCompleted = true;
