@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/qlikAssignment'),
+      dir: require('path').join(__dirname, './coverage/2048Game'),
       subdir: '.',
       reporters: [
         { type: 'html' },
