@@ -1,0 +1,17 @@
+<div class="canvas">
+  <div class="game-over" *ngIf="isGameOver">
+    <div class="game-over-message">
+      <h4 *ngIf="!gameCompleted">You've lost</h4>
+      <h4 *ngIf="gameCompleted">You've won</h4>
+    </div>
+  </div>
+  <div (swipeLeft)="handleSwipeEvent($event, direction.Left)" (swipeRight)="handleSwipeEvent($event, direction.Right)"
+    (swipeUp)="handleSwipeEvent($event, direction.Up)" (swipeDown)="handleSwipeEvent($event, direction.Down)">
+    <app-element *ngFor="let element of elements" [element]="element"></app-element>
+  </div>
+  <div class="howTo">
+    <h4>HOW TO PLAY: </h4> Use arrow keys or swipe to move tiles. When two tiles with same number collide, they will be
+    merged into one.
+    <p>Get 2048 to win the game. Have fun!!</p>
+  </div>
+</div>
