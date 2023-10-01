@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "2048-angular-latest": {
+    "2048-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/2048-angular-latest",
+            "outputPath": "dist/2048-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "2048-angular-latest:build:production"
+              "browserTarget": "2048-angular:build:production"
             },
             "development": {
-              "browserTarget": "2048-angular-latest:build:development"
+              "browserTarget": "2048-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "2048-angular-latest:build"
+            "browserTarget": "2048-angular:build"
           }
         },
         "test": {
